@@ -1,0 +1,80 @@
+@import "global/variables";
+@import "global/fonts";
+@import "global/print";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+  * {
+    box-sizing: border-box;
+    text-rendering: geometricPrecision;
+  }
+
+  html {
+    font-size: 1em;
+    line-height: 1.4;
+    height: 100%;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 0.02em;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    font-size: 1.2rem;
+    font-style: normal;
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    min-height: 100%;
+    margin: 0;
+    display: flex;
+  }
+
+  #__next {
+    display: grid;
+    grid-template: minmax(80px, auto) 1fr auto / minmax(0, 1fr);
+    justify-items: center;
+  }
+
+  main {
+    max-width: 90%;
+    width: 110rem;
+    margin: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem
+  }
+
+  footer {
+    max-width: 90%;
+    width: 110rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1rem;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-decoration: none;
+      color: #9de876;
+      flex-wrap: wrap;
+      margin: 5px 10px;
+
+      i {
+        line-height: 1;
+        margin-right: 5px;
+        color: #ccc;
+      }
+    }
+  }
+}
