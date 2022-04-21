@@ -18,7 +18,6 @@ const PostHeader = ({ title, coverImage, date }: Props) => {
       </div>
 
       <div className="text-right">
-
         <DateFormatter dateString={date}/>
       </div>
     </>
