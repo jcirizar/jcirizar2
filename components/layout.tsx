@@ -13,7 +13,7 @@ const Layout = ({ children }: Props) => {
     <>
       <Meta/>
       <Header/>
-      <main className={pathname === '/' ? 'home' : ''}>
+      <main className={`px-5 ${pathname === '/' ? 'home' : ''}`}>
         {children}
       </main>
       <Footer/>
