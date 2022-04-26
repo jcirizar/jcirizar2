@@ -1,10 +1,7 @@
 .header {
-  background-color: var(--main-dark-bg-color);
-  width: 100%;
+  @apply bg-neutral-900 w-full mb-8;
 
   h1 {
-    margin: 1rem;
-    font-size: 2rem;
-    font-weight: bold;
+    @apply text-2xl sm:text-3xl font-bold m-4;
   }
 }

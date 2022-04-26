@@ -1,4 +1,3 @@
-@import "global/variables";
 @import "global/fonts";
 @import "global/print";
 
@@ -14,67 +13,41 @@
   }
 
   html {
-    font-size: 1em;
-    line-height: 1.4;
     height: 100%;
   }
 
   body {
+    @apply bg-neutral-800 text-neutral-300 flex min-h-full;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
     letter-spacing: 0.02em;
-    background-color: var(--main-bg-color);
-    color: var(--main-text-color);
-    font-size: 1.2rem;
-    font-style: normal;
+
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace, serif;
-    min-height: 100%;
-    margin: 0;
-    display: flex;
   }
 
   #__next {
-    display: grid;
-    grid-template: minmax(80px, auto) 1fr auto / minmax(0, 1fr);
-    justify-items: center;
-    width: 100%;
+    @apply grid justify-items-center w-full;
+    grid-template: auto 1fr auto / minmax(0, 1fr);
   }
 
   main {
-    max-width: 90%;
-    width: 110rem;
-    margin: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 2rem
+    @apply flex flex-col gap-2  w-full lg:max-w-5xl;
+
+    &.home {
+      @apply justify-center items-center;
+    }
   }
 
   footer {
-    max-width: 90%;
-    width: 110rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 1rem;
+    @apply flex flex-wrap justify-center m-3;
 
     a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      text-decoration: none;
-      color: #9de876;
-      flex-wrap: wrap;
-      margin: 5px 10px;
+      @apply flex flex-wrap justify-center items-center text-green-300 my-1.5 mx-3 hover:underline decoration-0;
 
       i {
-        line-height: 1;
-        margin-right: 5px;
-        color: #ccc;
+        @apply text-neutral-300 mr-1.5 leading-none;
       }
     }
   }

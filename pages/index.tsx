@@ -10,13 +10,13 @@ const Index = () => {
         <Head>
           <title>{CMS_NAME}</title>
         </Head>
-        <article className="text-center">
-          Result-oriented software developer with 8 years of experience writing, testing and deploying high quality
+        <article className="text-center max-w-screen-md">
+          Result-oriented Software Engineer with 8 years of experience writing, testing and deploying high quality
           web, mobile and server-side applications.
         </article>
         <aside>
           <Link href="/posts">
-            <a className="hover:underline font-bold">
+            <a className="hover:underline font-bold text-green-300">
               Visit the blog
             </a>
           </Link>
@@ -27,10 +27,3 @@ const Index = () => {
 };
 
 export default Index;
-
-export const getStaticProps = async () => {
-
-  return {
-    props: {},
-  };
-};
