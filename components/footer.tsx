@@ -9,7 +9,7 @@ const Footer = () => {
         <i className="jci-l"></i>
         <span>LinkedIn</span>
       </a>
-      <a href="mailto:developer@jcirizar.com">
+      <a href="mailto:juan@irizar.dev">
         <i className="jci-i"></i>
         <span>Email</span>
       </a>

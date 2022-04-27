@@ -10,13 +10,13 @@ const Index = () => {
         <Head>
           <title>{CMS_NAME}</title>
         </Head>
-        <article className="text-center max-w-screen-md">
+        <article>
           Result-oriented Software Engineer with 8 years of experience writing, testing and deploying high quality
           web, mobile and server-side applications.
         </article>
         <aside>
           <Link href="/posts">
-            <a className="hover:underline font-bold text-green-300">
+            <a className="visit">
               Visit the blog
             </a>
           </Link>

@@ -33,10 +33,18 @@
   }
 
   main {
-    @apply flex flex-col gap-2  w-full lg:max-w-5xl;
+    @apply flex flex-col gap-4  w-full lg:max-w-5xl;
 
     &.home {
-      @apply justify-center items-center;
+      @apply justify-center items-center text-xl;
+    }
+
+    > article {
+      @apply text-center max-w-screen-md;
+    }
+
+    .visit {
+      @apply hover:underline font-bold text-green-300;
     }
   }
 

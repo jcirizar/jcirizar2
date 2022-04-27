@@ -36,7 +36,6 @@ const Meta = () => {
         name="description"
         content={`${CMS_NAME}`}
       />
-      <meta property="og:image" content={HOME_OG_IMAGE_URL} />
     </Head>
   )
 }
