@@ -1,11 +1,13 @@
+import { GITHUB, LINKEDIN } from '../lib/constants';
+
 const Footer = () => {
   return (
     <footer>
-      <a href="https://github.com/jcirizar">
+      <a href={GITHUB}>
         <i className="jci-g"></i>
         <span>Github</span>
       </a>
-      <a href="https://www.linkedin.com/in/jcirizar">
+      <a href={LINKEDIN}>
         <i className="jci-l"></i>
         <span>LinkedIn</span>
       </a>

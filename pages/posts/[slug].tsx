@@ -7,11 +7,12 @@ import Head from 'next/head';
 import { CMS_NAME } from '../../lib/constants';
 import markdownToHtml from '../../lib/markdownToHtml';
 import PostType from '../../types/post';
+import { generateRSSFeed } from '../../lib/generateRSSFeed';
+import fs from 'fs';
 
 type Props = {
   post: PostType
   morePosts: PostType[]
-  preview?: boolean
 }
 
 const Post = ({ post }: Props) => {

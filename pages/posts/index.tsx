@@ -6,6 +6,7 @@ import Post from '../../types/post';
 import { getAllPosts } from '../../lib/api';
 import MoreStories from '../../components/more-stories';
 import Head from 'next/head';
+import { FEED_POST, generateRSSFeed } from '../../lib/generateRSSFeed';
 
 type Props = {
   allPosts: Post[]
@@ -44,9 +45,25 @@ export const getStaticProps = async () => {
     'title',
     'date',
     'slug',
+    'content',
     'coverImage',
+    'ogImage',
     'excerpt',
   ]);
+
+  const articles: FEED_POST[] = allPosts.map((post) => {
+    return {
+      content: post.content,
+      fileName: post.slug,
+      meta: {
+        date: new Date(post.date),
+        description: post.excerpt,
+        title: post.title
+      }
+    };
+  });
+
+  generateRSSFeed(articles);
 
   return {
     props: { allPosts },
