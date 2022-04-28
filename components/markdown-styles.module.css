@@ -18,5 +18,5 @@
 }
 
 .markdown pre {
-  @apply overflow-scroll text-purple-400 bg-neutral-700;
+  @apply overflow-auto text-purple-400 bg-neutral-700;
 }
