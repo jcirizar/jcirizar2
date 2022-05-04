@@ -25,8 +25,12 @@ export default class MyDocument extends Document {
             __html: `
            if ('serviceWorker' in navigator) {
               window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js');
+                navigator.serviceWorker.register('/sw.js').catch((e) => {
+                  console.log('Service worker registration failed:', e);
+                })
               });
+            } else {
+              console.log('Service workers are not supported.');
             }
           `,
           }}
